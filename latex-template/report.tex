@@ -1,0 +1,71 @@
+% Document class `report-template` accepts either project-plan or final-report option in [].
+\documentclass[project-plan]{report-template}
+
+% Packages I use in my report.
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{blindtext}
+
+% Directory where I saved my figures.
+\graphicspath{{./figures/}}
+
+% Metadata used for the title page - please modify.
+\university{Imperial College London}
+\department{Department of Earth Science and Engineering}
+\course{MSc in Applied Computational Science and Engineering}
+\title{Computational modelling of a particle in vertical motion}
+\author{Anne Other}
+\email{a.other@imperial.ac.uk}
+\githubusername{acse-ao21}
+\supervisors{Dr. John Doe\\
+             Prof. Jane Doe}
+\repository{https://github.com/ese-msc-2021/irp-acse-ao21}
+
+\begin{document}
+
+\maketitlepage  % generate title page
+
+% Abstract
+\section*{Abstract}
+\blindtext  % outputs some dummy text
+
+% Introduction section
+\section{Introduction}
+\blindtext[2]
+
+% Another section
+\section{Methodology}
+In this work, we implemented the simulation package for computing the position of a particle in vertical motion as shown in Fig.~\ref{fig:experiment}. We compute the position $y(t)$ at time $t$ using:
+
+\begin{equation}
+    \label{eq:vertical-position}
+    y(t) = v_{0}t - \frac{1}{2}gt^{2},
+\end{equation}
+
+where $v_{0}$ is the initial velocity, and $g$ is the acceleration due to the Earth's gravity.
+
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=0.2\textwidth]{experiment.jpg}
+    \end{center}
+    \caption{\label{fig:experiment} Particle in vertical motion.}
+\end{figure}
+
+The Python code we implemented for computing $y(t)$ is:
+
+\begin{lstlisting}[language=Python]
+def position(t, v0=0, g=9.81):
+    """Position of a particle in verticle motion."""
+    return v0*t - 0.5*g*t**2
+\end{lstlisting}
+
+We made our computational workflows reproducible by employing the Jupyter environment~\cite{Beg2021}.
+
+\section{Conclusion}
+\blindtext[2]
+
+% References
+\bibliographystyle{plain}
+\bibliography{references}  % BibTeX references are saved in references.bib
+
+\end{document}          
