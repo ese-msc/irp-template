@@ -10,6 +10,7 @@
 \DTMlangsetup{showdayofmonth=false}
 \RequirePackage{setspace}
 \RequirePackage{xcolor}
+\RequirePackage{hyperref}
 \RequirePackage{microtype}  % improve text
 \RequirePackage[parfill]{parskip}  % remove indentation for paragraphs
 \RequirePackage{xurl}  % helps breaking urls with \url{}
