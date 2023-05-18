@@ -25,7 +25,8 @@
 \def\repository#1{\def\@repository{#1}}
 
 % sans-serif font
-\renewcommand{\familydefault}{\sfdefault}
+% \renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\familydefault}{phv}
 
 % Class options
 \DeclareOption{project-plan}{\newcommand{\doctype}{Project Plan}}
