@@ -2,10 +2,7 @@ report.pdf: report.tex report-template.cls references.bib figures/*
 	make force
 
 force:
-	pdflatex -shell-escape report.tex
-	bibtex report.aux
-	pdflatex -shell-escape report.tex
-	pdflatex -shell-escape report.tex
+	latexmk -pdf report.tex
 
 clean:
 	rm -f *.pdf
