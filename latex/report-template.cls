@@ -56,9 +56,7 @@
             {\Large by\\}
             {\LARGE \@author\\}
             \vspace{1.5cm}
-            {\Large Email: \@email\\}
-            {\Large GitHub username: \@githubusername}\\
-            {\Large Repository: \@repository}\\[1.5cm]
+            {\Large repository: \href{\@repository}{\@repository}}\\[1.5cm]
             {\Large Supervisors:\\
             \@supervisors}
             \vspace*{\fill}   
